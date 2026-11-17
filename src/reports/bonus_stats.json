@@ -1,0 +1,67 @@
+{
+  "note": "simulated cost; MockLLM; resampling by claim. Not an API bill.",
+  "by_shape": {
+    "swarm": {
+      "trials": 70,
+      "successes": 69,
+      "pass_rate": 0.9857142857142858,
+      "cost_per_success_vnd": 49.567,
+      "ci_low": 0.9571428571428572,
+      "ci_high": 1.0,
+      "iterations": 10000
+    },
+    "swarm_no_ticket_override": {
+      "trials": 70,
+      "successes": 70,
+      "pass_rate": 1.0,
+      "cost_per_success_vnd": 48.7157,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "iterations": 10000
+    },
+    "swarm_pruned": {
+      "trials": 70,
+      "successes": 69,
+      "pass_rate": 0.9857142857142858,
+      "cost_per_success_vnd": 47.2464,
+      "ci_low": 0.9571428571428572,
+      "ci_high": 1.0,
+      "iterations": 10000
+    },
+    "workflow": {
+      "trials": 70,
+      "successes": 70,
+      "pass_rate": 1.0,
+      "cost_per_success_vnd": 27.8571,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "iterations": 10000
+    }
+  },
+  "mcnemar_vs_swarm": {
+    "swarm_no_ticket_override": {
+      "pairs": 70,
+      "only_swarm": 0,
+      "only_swarm_no_ticket_override": 1,
+      "discordant": 1,
+      "p_value": 1.0,
+      "significant_at_0.05": false
+    },
+    "swarm_pruned": {
+      "pairs": 70,
+      "only_swarm": 0,
+      "only_swarm_pruned": 0,
+      "discordant": 0,
+      "p_value": 1.0,
+      "significant_at_0.05": false
+    },
+    "workflow": {
+      "pairs": 70,
+      "only_swarm": 0,
+      "only_workflow": 1,
+      "discordant": 1,
+      "p_value": 1.0,
+      "significant_at_0.05": false
+    }
+  }
+}
