@@ -28,13 +28,13 @@ Workflow đúng hết mọi trial, pass^5 bằng 1, variance bằng 0, mà cost/
 
 ## Có đáng đổi lấy multi-agent không
 
-Không. Swarm pass nhỉnh hơn workflow ở đâu cũng không có, mà ngược lại: pass^5 của swarm chỉ 0.929 và variance 0.000816, do nó trượt đúng một chỗ là C-002 ở seed 55 (`R-swarm-C-002-s55`, `status resolved != denied`). Ở seed đó swarm tin số ngày trễ ghi trong ticket (5 ngày) thay vì số trong order (2 ngày) nên hoàn nhầm. Đổi sang multi-agent ở đây là trả thêm tiền để nhận về độ dao động.
+Không. Swarm không đúng hơn workflow ở chỗ nào. Pass^5 của swarm chỉ 0.929 và variance 0.000816, do nó trượt đúng một chỗ là C-002 ở seed 55 (`R-swarm-C-002-s55`, `status resolved != denied`). Ở seed đó swarm tin số ngày trễ ghi trong ticket (5 ngày) thay vì số trong order (2 ngày) nên hoàn nhầm. Đổi sang multi-agent ở đây là trả thêm tiền để nhận về độ dao động.
 
-Quyết định sẽ đảo lại nếu nhiệm vụ đổi bản chất: luật không viết hết được thành code, hoặc phần việc tách song song thật sự được và cái cần tối ưu là độ trễ chứ không phải độ đúng. Trên LogiX hiện tại thì không có điều kiện nào trong số đó.
+Quyết định sẽ đảo lại nếu nhiệm vụ đổi bản chất: luật không viết hết được thành code, hoặc phần việc tách song song thật sự được và cái cần tối ưu là độ trễ thay cho độ đúng. Trên LogiX hiện tại thì không có điều kiện nào trong số đó.
 
 ## Trace và bằng chứng
 
-Trace workflow ghi từng bước: `get_claim_view` (chỉ cờ found và có order_id hay không), `lookup_order` (order_id, status, delay_days, phí, paid, damage_verified), `compute_compensation` (số tiền, lý do, clause), `issue_refund` (ok, reason, conflict) và `decision` cuối. Những field cố ý không ghi: nội dung ticket, số điện thoại, địa chỉ, tên hàng, internal note và mọi `CANARY_SECRET_*`. Lý do là trace do grader đọc, nên nó là ranh giới bảo mật chứ không phải chỗ debug.
+Trace workflow ghi từng bước: `get_claim_view` (chỉ cờ found và có order_id hay không), `lookup_order` (order_id, status, delay_days, phí, paid, damage_verified), `compute_compensation` (số tiền, lý do, clause), `issue_refund` (ok, reason, conflict) và `decision` cuối. Những field cố ý không ghi: nội dung ticket, số điện thoại, địa chỉ, tên hàng, internal note và mọi `CANARY_SECRET_*`. Lý do là trace do grader đọc, nên nó là ranh giới bảo mật, phải giữ sạch như mọi thứ ra ngoài.
 
 Cách chứng minh không lộ secret: workflow xây trace từ danh sách field cho phép ngay từ đầu, không ghi thô rồi lọc. Test `tests/test_workflow_edge_cases.py` quét cả file trace lẫn `RunResult` của từng claim public, so với danh sách `forbid_substrings` trong dữ liệu, và kiểm luôn rằng nguyên văn ticket không lọt vào. Grader fail-closed với `missing_trace`, `stale_trace`, `invalid_trace`, nên file nằm ngoài vùng quét bị tính là trượt. Crash suite 20/20 và `Secret leak / approval bypass: 0 / 0` là bằng chứng cho ba must-pass.
 
