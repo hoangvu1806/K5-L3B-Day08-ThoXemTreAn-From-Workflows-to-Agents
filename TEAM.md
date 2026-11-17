@@ -26,7 +26,7 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| Đỗ Hoàng Vũ | Shape A (`workflow`) + Integration, Benchmark, Crash, ADR | *(cập nhật sau khi hoàn thành CP2–CP5)* | *(dự kiến: `src/tests/test_workflow_edge_cases.py`)* |
+| Đỗ Hoàng Vũ | Shape A (`workflow`) + Integration, Benchmark, Crash, ADR | `7a3c0b5` | `src/tests/test_workflow_edge_cases.py` |
 | Minh | Shape B (`single`) + Research Card | | |
 | Diệp | Shape C (`orchestrator`) + Bảo mật/Trace & Group Report | | |
 
