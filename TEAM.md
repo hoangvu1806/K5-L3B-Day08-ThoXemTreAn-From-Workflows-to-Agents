@@ -2,17 +2,18 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- Tên nhóm: ThoXemTreAn
+- Lớp: L3B
+- Repo nhóm: `K5-L3B-Day08-ThoXemTreAn-From-Workflows-to-Agents` (xem [SUBMISSION.md](SUBMISSION.md))
+- URL repo, nhánh nộp, commit chốt: `https://github.com/hoangvu1806/K5-L3B-Day08-ThoXemTreAn-From-Workflows-to-Agents` · nhánh `main` · commit chốt *(cập nhật ở CP5)*
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
+|   1 | Đỗ Hoàng Vũ | 2A202603920 | dohoangvu.nt1806@gmail.com | hoangvu1806 | Shape A (`workflow`) + Integration, Benchmark, Crash, ADR |
+|   2 | Minh | | | | Shape B (`single`) + Research Card (`research_card.md`) |
+|   3 | Diệp | | | | Shape C (`orchestrator`) + Bảo mật/Trace & Group Report |
 
 Gợi ý chia vai:
 
@@ -25,7 +26,9 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| | | | |
+| Đỗ Hoàng Vũ | Shape A (`workflow`) + Integration, Benchmark, Crash, ADR | `7a3c0b5` | `src/tests/test_workflow_edge_cases.py` |
+| Minh | Shape B (`single`) + Research Card | | |
+| Diệp | Shape C (`orchestrator`) + Bảo mật/Trace & Group Report | | |
 
 ## Cá nhân
 
@@ -38,6 +41,23 @@ report/team/MSSV_HoTen.md
 Ví dụ: `report/team/20241234_NguyenVanAn.md`.
 
 Sao chép mục dưới đây cho từng thành viên.
+
+## 2A202603920_DoHoangVu
+
+### Phần việc phụ trách
+
+- Thiết kế và triển khai Shape A (`src/lab8/shapes/workflow.py`) theo quy trình Python cố định.
+- Đầu mối tích hợp repo, chạy `lab8.crash_test` (`src/reports/crash.json`), `lab8.benchmark` (`src/reports/benchmark.json`), tự kiểm `student_drop/`, viết `report/team/decision_adr.md` và chạy `python -m lab8.check_submission`.
+
+### Đóng góp cụ thể
+
+- Tạo tài liệu phân công nhóm tại `docs/assignment.md` (`4ffdea3`).
+- *(Cập nhật thêm commit triển khai `workflow.py`, file test `src/tests/test_workflow_edge_cases.py`, benchmark/crash và `decision_adr.md` khi hoàn thành.)*
+
+### Bằng chứng
+
+- Commit phân công: `4ffdea3` (`docs: add team assignment for Vu, Minh, and Diep`)
+- *(Bổ sung run id, test và commit chốt ở CP4–CP5.)*
 
 ## MSSV_HoTen
 
