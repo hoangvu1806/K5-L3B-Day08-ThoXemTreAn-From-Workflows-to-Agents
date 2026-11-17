@@ -14,6 +14,7 @@
 |   1 | Đỗ Hoàng Vũ | 2A202603920 | dohoangvu.nt1806@gmail.com | hoangvu1806 | Shape A (`workflow`) + Integration, Benchmark, Crash, ADR |
 |   2 | Minh | | | | Shape B (`single`) + Research Card (`research_card.md`) |
 | 3 | Hoàng Minh Diệp | 2A202603764 | hoangminhdiepnd2004@gmail.com | [diep142](https://github.com/diep142) | Shape C (`orchestrator`) + Handoff, Bảo mật/Trace & Group Report |
+
 Gợi ý chia vai:
 
 - Nhóm 6 người: integration; workflow; single agent; orchestrator; ledger/policy/crash; eval/report.
