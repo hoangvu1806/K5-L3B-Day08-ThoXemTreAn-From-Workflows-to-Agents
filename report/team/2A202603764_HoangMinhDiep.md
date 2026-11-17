@@ -10,7 +10,6 @@
 ## 2. Phần việc phụ trách
 
 - Phụ trách Shape C (`orchestrator`), handoff và kiểm tra bảo mật trace.
-- Tổng hợp báo cáo nhóm theo [phân công](../../docs/assignment.md).
 
 ## 3. Đóng góp cụ thể
 
