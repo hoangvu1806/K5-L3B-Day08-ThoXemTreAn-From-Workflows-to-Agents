@@ -43,7 +43,7 @@ SINGLE_RUN_CLAIMS = [f"C-{i:03d}" for i in range(1, 11)] + ["C-013", "C-014"]
 @pytest.mark.parametrize("shape", SHAPES_UNDER_TEST)
 @pytest.mark.parametrize("claim_id", SINGLE_RUN_CLAIMS)
 @pytest.mark.parametrize("seed", [11, 22, 33, 44, 55])
-def test_public_single_run_cases(tmp_path, shape, claim_id, seed):
+def test_public_claim_cases(tmp_path, shape, claim_id, seed):
     store = _store(tmp_path, f"{shape}-{claim_id}-{seed}.sqlite")
     started_at = time.time()
     result = SHAPES[shape](claim_id, seed=seed, store_path=str(store))
