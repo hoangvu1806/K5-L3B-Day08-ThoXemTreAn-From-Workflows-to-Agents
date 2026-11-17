@@ -5,7 +5,7 @@
 - Tên nhóm: ThoXemTreAn
 - Lớp: L3B
 - Repo nhóm: `K5-L3B-Day08-ThoXemTreAn-From-Workflows-to-Agents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: `https://github.com/hoangvu1806/K5-L3B-Day08-ThoXemTreAn-From-Workflows-to-Agents` · nhánh `main` · commit chốt *(cập nhật ở CP5)*
+- URL repo, nhánh nộp, commit chốt: `https://github.com/hoangvu1806/K5-L3B-Day08-ThoXemTreAn-From-Workflows-to-Agents` · nhánh `main` · commit chốt `09d951f` (bản hoàn chỉnh cả bài chính và bonus B4)
 
 ## Thành viên
 

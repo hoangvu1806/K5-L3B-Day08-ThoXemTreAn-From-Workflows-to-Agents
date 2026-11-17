@@ -15,7 +15,9 @@ __pycache__/
 *.sqlite-*
 traces/
 student_drop/
+student_drop.zip
 src/reports/hidden_grade.json
+src/reports/hidden_selfcheck.json
 src/reports/bonus_hidden.json
 
 # Instructor-only hidden pack. Never push it to this repo.
